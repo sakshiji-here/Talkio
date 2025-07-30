@@ -1,7 +1,13 @@
 import React from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
-import { Cog, LogOut, MessageSquareQuote, UserCircle } from "lucide-react";
+import {
+  Cog,
+  LogOut,
+  MessageSquareQuote,
+  Palette,
+  UserCircle,
+} from "lucide-react";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
@@ -27,8 +33,8 @@ const Navbar = () => {
               to={"/settings"}
               className={`btn btn-sm gap-2 transition-colors`}
             >
-              <Cog className="w-4 h-4" />
-              <span className="hidden sm:inline">Settings</span>
+              <Palette className="w-4 h-4" />
+              <span className="hidden sm:inline">Theme</span>
             </Link>
 
             {authUser && (
